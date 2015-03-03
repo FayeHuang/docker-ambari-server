@@ -12,11 +12,11 @@ base on [FayeHuang/docker-centos-serf](https://github.com/FayeHuang/docker-cento
 
 * 可透過設定 **ROOTPASSWORD**=mypassword 指定 root ssh login 密碼。如不指定 root ssh login 密碼，預設密碼為 **changeme**
 
-        `docker run -d -p 2222:22 -p 8080:8080 --name=my-ambari-server --hostname=ambari.example.local --dns=127.0.0.1 -e ROOTPASSWORD=<mypassowrd> fayehuang/ambari-server`
+        docker run -d -p 2222:22 -p 8080:8080 --name=my-ambari-server --hostname=ambari.example.local --dns=127.0.0.1 -e ROOTPASSWORD=<mypassowrd> fayehuang/ambari-server
 
 * 可透過設定 **SERF_JOIN_IP**=1.1.1.1（叢集內任一節點 IP），加入特定的叢集。
 
-        `docker run -d -p 2222:22 -p 8080:8080 --name=my-ambari-server --hostname=ambari.example.local --dns=127.0.0.1 -e SERF_JOIN_IP=<node_IP> fayehuang/ambari-server`
+        docker run -d -p 2222:22 -p 8080:8080 --name=my-ambari-server --hostname=ambari.example.local --dns=127.0.0.1 -e SERF_JOIN_IP=<node_IP> fayehuang/ambari-server
   
 Get Involved
 -----
